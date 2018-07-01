@@ -2,7 +2,7 @@
 
 A simple demo bug tracker built using API Platform (Symfony) and backed by CockroachDB
 
-## Notes
+## Description
 
 This is a simple demo application built using API Platform.
 It's a minimal bug tracker with no way for tracking bugs apart from them existing or not.
@@ -10,6 +10,11 @@ Main reason for this project is to try out CockroachDB with PHP, and in particul
 
 Three CockroachDB nodes are started and joined in a single cluster.
 Currently it's an _insecure_ configuration; not suited for production usage!
+
+One can start the application by executing _docker-compose up -d_.
+This will start the three CockroachDB nodes (roach1, roach2 and roach3) and make them join the cluster.
+The PHP container depends on roach1 for retrieving and storing data.
+Data for each of the nodes is stored in three separate Docker volumes.
 
 ## SQL
 

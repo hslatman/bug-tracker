@@ -154,7 +154,7 @@ services:
       - bug-tracker
 
 volumes:
-  pg-data: {}
+  #pg-data: {}
   cockroach-db-data-1: {}
   cockroach-db-data-2: {}
   cockroach-db-data-3: {}
