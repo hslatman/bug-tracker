@@ -16,6 +16,9 @@ This will start the three CockroachDB nodes (roach1, roach2 and roach3) and make
 The PHP container depends on roach1 for retrieving and storing data.
 Data for each of the nodes is stored in three separate Docker volumes.
 
+After starting the Docker container, the Swagger UI exposing the Bug Tracker API can be reached at localhost:8080 or on the IP of your docker-machine (i.e. 192.168.99.100:8080).
+The CockroachDB web interface, showing the current status of the cluster and its nodes, is exposed on port 8090.
+
 ## SQL
 
 CockroachDB supports the PostgreSQL Wire Protocol.
