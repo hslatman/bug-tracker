@@ -19,6 +19,18 @@ Data for each of the nodes is stored in three separate Docker volumes.
 After starting the Docker container, the Swagger UI exposing the Bug Tracker API can be reached at localhost:8080 or on the IP of your docker-machine (i.e. 192.168.99.100:8080).
 The CockroachDB web interface, showing the current status of the cluster and its nodes, is exposed on port 8090.
 
+I haven't looked too much into a graphical tool to work with CockroachDB yet.
+The commandline utility is a lot like the MySQL commandline utility.
+Example commands:
+
+```bash
+# start sql commandline utility on roach1
+$ docker-compose exec roach1 ./cockroach sql
+
+# execute MySQL commands and SQL
+$ show databases;
+```
+
 ## SQL
 
 CockroachDB supports the PostgreSQL Wire Protocol.
@@ -43,3 +55,4 @@ The _bug_ table is created with a _serial_ id as its primary key and it has two 
 The _sequence_ needs to be created in order for inserts to use the nextval() function.
 
 Some more information about Doctrine compatiblity can be found [here](https://github.com/cockroachdb/cockroach/issues/19337) and [here](https://github.com/cockroachdb/cockroach/issues/25468).
+Another example application using CockroachDB with Symfony and Doctrine can be found [here](https://github.com/radutopala/cockroach-app).
